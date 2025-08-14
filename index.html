@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="stylesheet" href="style.css">
+  <title>Portifolio ZR</title>
+</head>
+
+<body>
+  <header class="header">
+  <!-- Checkbox que controla o menu -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Ícone hamburguer -->
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <h1 class="title">Portfólio</h1>
+
+  <!-- Menu fullscreen -->
+  <ul class="menu">
+    <li><label for="menu-toggle"><a href="index.html">Início</a></label></li>
+    <li><label for="menu-toggle"><a href="#sobre-mim">Sobre</a></label></li>
+    <li><label for="menu-toggle"><a href="#habilidades">Habilidades</a></label></li>
+    <li><label for="menu-toggle"><a href="#projects-section">Projetos</a></label></li>
+  </ul>
+</header>
+  <section>
+    <h1 class="bemvindo">Olá, Bem vindo ao meu Portfólio</h1>
+    <p>Sou desenvolvedor web!</p>
+    <div class="conteudo-container">
+      <div class="button-container">
+        <a href="/pdf/Zadson_Romero_currículo.pdf" download class="secao-buton">
+          <div>
+            <span>
+              <p>Download CV</p>
+            </span>
+          </div>
+          <div>
+            <span>
+              <p>Obrigado</p>
+            </span>
+          </div>
+        </a>
+        <a href="mailto:zadson65@gmail.com" class="secao-buton">
+          <div>
+            <span>
+              <p>Contato</p>
+            </span>
+          </div>
+          <div>
+            <span>
+              <p>Obrigado</p>
+            </span>
+          </div>
+        </a>
+        <img src="/img/Zady.jpg" alt="Foto de Zadson" class="foto-direita">
+      </div>
+    </div>
+  </section>
+  <section id ="sobre-mim">
+    <h2 >Sobre mim</h2>
+    <p class="sobre">Sou formado como desenvolvedor web, com foco em HTML, CSS5 e JavaScript,<br>
+      e atualmente me aprofundando no back-end com Java.<br>
+      Busco constantemente aprimorar minhas habilidades e construir soluções eficientes,<br>
+      unindo boa estrutura de código e experiência do usuário.<br>
+      Além disso, possuo conhecimentos em Git para versionamento de código e MySQL para gerenciamento de bancos de
+      dados.<br>
+    </p>
+  </section>
+  <section id="habilidades">
+  <h2 class="habilidades">Habilidades</h2>
+ <div class="container">
+  <!-- Inputs de controle -->
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+  <input type="radio" name="slider" id="s6">
+
+  <!-- Carrossel -->
+  <div class="carousel">
+    <div>
+      <h3>JAVA</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatibus dolore sint cupiditate, vero aliquam, aliquid ipsa tempora odit deserunt ullam quas dolorem nobis sed nemo impedit blanditiis magni incidunt.</p>
+    </div>
+    <div>
+      <h3>HTML</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat error voluptatibus, blanditiis magnam architecto esse aperiam aut amet autem perferendis obcaecati dolores minus suscipit optio. Voluptatibus sapiente reprehenderit sint. Recusandae?</p>
+    </div>
+    <div>
+      <h3>CSS5</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia ipsum sapiente suscipit eveniet, ratione eos, cupiditate, culpa laborum dolorum enim eum ex ea quae libero soluta natus? Fugiat, sapiente cupiditate!</p>
+    </div>
+    <div>
+      <h3>JAVASCRIPT</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veniam ullam ipsam facilis itaque natus animi voluptatum aliquam debitis, cupiditate expedita iste dignissimos illum. Officiis rem tempore atque molestias dolore!</p>
+    </div>
+    <div>
+      <h3>MYSQL</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem obcaecati sequi inventore libero corporis! Nemo facilis illo odio cupiditate maiores ducimus eligendi quae incidunt fugit laboriosam. Reiciendis pariatur esse eos!</p>
+    </div>
+    <div>
+      <h3>GIT</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque maiores sapiente voluptates perspiciatis animi magnam repellat accusantium reiciendis odit expedita aspernatur eos eligendi dolores, unde consequuntur iste in, quaerat provident.</p>
+    </div>
+  </div>
+
+  <!-- Navegação -->
+  <div class="navegacao">
+    <label for="s1"></label>
+    <label for="s2"></label>
+    <label for="s3"></label>
+    <label for="s4"></label>
+    <label for="s5"></label>
+    <label for="s6"></label>
+  </div>
+  </section>
+</div>
+<section id="projects-section" class="projects-section">
+  <h2 >Projetos</h2>
+  
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-image"></div>
+      <p class="card-title">Em breve</p>
+      <p class="card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi in repellendus eius aut consequatur laborum.
+      </p>
+      <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+    </div>
+
+    <div class="card">
+  <a href="https://equipenext.github.io/SiteEquipeNext/" target="_blank">
+    <div class="card-image">
+      <img src="/img/Captura de tela 2025-08-14 110731.png" alt="projeto">
+    </div>
+  </a>
+  <p class="card-title">Projeto Next</p>
+  <p class="card-body">
+    Projeto Next, realizado através do SENAI, trabalho em equipe para desenvolver um projeto para olarias.
+  </p>
+  <p class="footer"><span class="by-name">Equipe Next</span> <span class="date">25/05/22</span></p>
+</div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <p class="card-title">Em breve</p>
+      <p class="card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi in repellendus eius aut consequatur laborum.
+      </p>
+      <p class="footer">Written by <span class="by-name">John Doe</span> on <span class="date">25/05/23</span></p>
+    </div>
+  </div>
+</section>
+  </section>
+<script>
+  // Desabilita clique direito
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Desabilita Ctrl+U, F12 e Ctrl+Shift+I
+  document.addEventListener('keydown', function(e){
+    if(e.ctrlKey && e.key === 'u') e.preventDefault();
+    if(e.key === 'F12') e.preventDefault();
+    if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') e.preventDefault(); // Ctrl+Shift+I
+  });
+
+  // Fecha o menu fullscreen ao clicar em qualquer link
+  const menuLinks = document.querySelectorAll('.menu a');
+  const menuToggle = document.getElementById('menu-toggle');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.checked = false;
+    });
+  });
+</script>
+
+</body>
+
+
+</html>

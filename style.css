@@ -1,0 +1,511 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+   background: linear-gradient(to right,
+      #090040 20%,
+      /* cor inicial */
+      #1a1a80 50%,
+      /* cor no meio */
+      #3f3fff 90%
+      /* cor final */
+    );
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header flex container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 60px;
+  background: linear-gradient(to right,
+      #090040 20%,
+      /* cor inicial */
+      #1a1a80 50%,
+      /* cor no meio */
+      #3f3fff 100%
+      /* cor final */
+    );
+  padding: 0 10px;
+  border-bottom: 2px solid #3E0703; /* linha  embaixo */
+  padding: 10px;
+}
+
+/* Checkbox escondido */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícone hamburguer */
+.menu-icon {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  /* Para manter fixo no canto esquerdo */
+  left: 20px;
+  display: inline-block;
+}
+
+.menu-icon span {
+  background: goldenrod;
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+  top: 20px;
+}
+
+/* Transformação do ícone quando marcado */
+#menu-toggle:checked+.menu-icon span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+/* Título centralizado */
+.title {
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  /* evita seleção ao clicar */
+  pointer-events: none;
+  /* não interfere no clique do menu */
+  color: goldenrod;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ background: rgba(0, 0, 0, 0.7); /* fundo preto semi-transparente */
+  list-style: none;
+  position: fixed; /* mudou de absolute para fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* ocupa toda a tela */
+  margin: 0;
+  padding: 0;
+  transform: scale(0); /* inicia escondido */
+  transition: transform 0.3s ease-in-out;
+  z-index: 999; /* acima do conteúdo */
+}
+
+/* Mostrar menu ao ativar checkbox */
+#menu-toggle:checked ~ .menu {
+  transform: scale(1); /* mostra full screen */
+}
+
+/* Itens do menu centralizados */
+.menu li {
+  margin: 20px 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+.bemvindo,p{
+  color: goldenrod;
+  text-align: left;
+  top: 30%;
+  padding-left: 20%;
+}
+section{
+  padding-top: 10%;
+}
+/* Botão para donwload*/ 
+.button-container {
+  display: flex;
+  gap: 10px;         /* espaço entre os botões */
+  margin-left: 20%;   /* afasta todo o grupo da esquerda */
+}
+
+.secao-buton {
+  position: relative;      /* importante para o efeito de deslizamento */
+  display: inline-block;
+  width: 190px;
+  height: 50px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.secao-buton div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;  
+  top: 0;
+  left: 0;
+}
+
+.secao-buton div:nth-child(1) { background-color: #3B38A0; z-index: 1; }
+.secao-buton div:nth-child(2) { background-color: #1A2A80; z-index: 0; }
+
+.secao-buton:hover div:nth-child(1) {
+  transform: translateY(-50px);  /* desliza para cima */
+}
+
+.secao-buton p {
+  font-size: 17px;
+  font-weight: bold;
+  color: goldenrod;
+  margin: 0;
+  text-align: center;
+}
+
+.secao-buton:active {
+  transform: scale(0.95);
+}
+.conteudo-container {
+  display: flex;
+  align-items: flex-start; /* alinha no topo */
+  gap: 40px;
+  position: relative; /* referência para a posição absoluta da imagem */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.foto-direita {
+  position: absolute;
+  top: -250%;
+  right: 10%;
+  width: 300px;
+  height: 300px; /* precisa ser altura = largura */
+  border-radius: 50%; /* círculo */
+  object-fit: cover; /* evita distorção da imagem */
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+h2{
+  text-align: center;
+   color: goldenrod;
+}
+.sobre{
+  margin-left: 17%;
+}
+/*--------------------------------------------CARROSEL 3D----------------------------------------------------------------------------------------------------*/
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 50px auto; /* centraliza horizontalmente e dá espaço acima */
+}
+
+
+
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    
+  }
+
+  .carousel div {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    left: 25px;
+    top: 75px;
+    background: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  /* Posicionamento 3D dos slides */
+  .carousel div:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
+  .carousel div:nth-child(2) { transform: rotateY(60deg) translateZ(400px); }
+  .carousel div:nth-child(3) { transform: rotateY(120deg) translateZ(400px); }
+  .carousel div:nth-child(4) { transform: rotateY(180deg) translateZ(400px); }
+  .carousel div:nth-child(5) { transform: rotateY(240deg) translateZ(400px); }
+  .carousel div:nth-child(6) { transform: rotateY(300deg) translateZ(400px); }
+
+  /* Esconde os inputs */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Botões de navegação */
+  .navegacao {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .navegacao label {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:  0.3s;
+  }
+  .navegacao label:hover {
+    background: #ffcc00;
+  }
+
+  /* Controle de rotação com base no radio selecionado */
+  #s1:checked ~ .carousel { transform: rotateY(0deg); }
+  #s2:checked ~ .carousel { transform: rotateY(-60deg); }
+  #s3:checked ~ .carousel { transform: rotateY(-120deg); }
+  #s4:checked ~ .carousel { transform: rotateY(-180deg); }
+  #s5:checked ~ .carousel { transform: rotateY(-240deg); }
+  #s6:checked ~ .carousel { transform: rotateY(-300deg); }
+  
+  .carousel div {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  left: 25px;
+  top: 75px;
+  background: #ffcc00;
+  display: flex;
+  flex-direction: column; /* permite empilhar título e parágrafo */
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem; /* ajusta tamanho do texto */
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow: hidden; /* evita overflow do parágrafo */
+  text-align: center;
+}
+
+.carousel div h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.carousel div p {
+  margin: 5px 0 0 0;
+  font-weight: normal;
+  padding: 0;
+  font-size: 0.8rem;
+  color: black;
+  text-align: center;
+}
+/**---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  .projects-section {
+    text-align: center;
+    padding: 0px 20px;
+    margin-top: 5%;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+    color: goldenrod;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  /* Container para os cards */
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  /* Card */
+  .card {
+    padding: 20px;
+    width: 330px;
+    min-height: 370px;
+    border-radius: 20px;
+    background: #212121;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    translate: 0 -10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: goldenrod;
+    margin: 15px 0 0 10px;
+  }
+
+  .card-image {
+    min-height: 170px;
+    border-radius: 15px;
+    background: #313131;
+
+    overflow: hidden; /* importante para manter a imagem dentro do card */
+    margin-bottom: 10px;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem preencher sem distorcer */
+  }
+
+  .card-body {
+    margin: 13px 0 0 10px;
+    color: goldenrod;
+    font-size: 15px;
+  }
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 20px 0; /* só padding vertical, sem lateral */
+  }
+
+  .cards-container {
+    gap: 10px; /* espaçamento entre os cards */
+    padding: 0; /* remove padding lateral */
+  }
+
+  .card {
+    width: 100%; /* ocupa toda a largura disponível */
+    margin: 0;    /* remove margem lateral */
+  }
+
+  .foto-direita {
+    display: none; /* oculta a foto */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 15px 0; /* menos padding vertical ainda */
+  }
+
+  .cards-container {
+    gap: 8px;
+    padding: 0; /* sem padding lateral */
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .projects-section h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* evita barra de rolagem horizontal */
+  }
+
+  .projects-section {
+    padding: 20px 0; /* só padding vertical */
+    margin: 0;
+  }
+
+  .cards-container {
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%; /* ocupa toda a largura disponível */
+    margin: 0;
+  }
+
+  .foto-direita {
+    display: none; /* remove a foto */
+  }
+
+  .bemvindo, p {
+    padding-left: 5%; /* reduz padding lateral */
+    text-align: left;
+  }
+
+  .sobre {
+    margin-left: 0; /* remove margem lateral */
+  }
+
+  .button-container {
+    margin-left: 0; /* remove margem lateral */
+    justify-content: center; /* centraliza os botões */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 15px 0;
+  }
+
+  .cards-container {
+    gap: 8px;
+    padding: 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+}
